@@ -5,11 +5,12 @@ const http = require('http');
 const express = require('express');
 const socketIO = require('socket.io');
 
+const port = process.env.PORT || 3000;
+
 //public path refers to the folder that stores html
 const publicPath = path.join(__dirname, '../public/');
 
 //variable declaration
-var port = 3000;
 var app = express();
 var server = http.createServer(app);
 var serverArray = [];
